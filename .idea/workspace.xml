@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b8a4ec-40b3-41ed-82ec-88ec5bec7ee3" name="Default Changelist" comment="add cookies feature">
-      <change afterPath="$PROJECT_DIR$/.idea/facebook-ui-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/group.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/messenger.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/input_data.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/input_data.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Data/input_data.robot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +48,7 @@
           <entry key="gitattributes" value="25" />
           <entry key="gitignore" value="37" />
           <entry key="md" value="407" />
-          <entry key="robot" value="3302" />
+          <entry key="robot" value="3303" />
           <entry key="txt" value="76" />
         </counts>
       </usages-collector>
@@ -63,7 +56,7 @@
         <counts>
           <entry key="Markdown" value="407" />
           <entry key="PLAIN_TEXT" value="138" />
-          <entry key="Robot Feature" value="3302" />
+          <entry key="Robot Feature" value="3303" />
         </counts>
       </usages-collector>
     </session>
@@ -73,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Data/input_data.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="135">
+              <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -474,8 +467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/input_data.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="135">
+          <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
         </state>
       </provider>
     </entry>
