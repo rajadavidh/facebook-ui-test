@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180912 18:16:31.581" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<robot generated="20180913 01:05:00.683" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
 <suite source="/Users/rajadavid/PycharmProjects/facebook-ui-test/tests/facebook.robot" id="s1" name="Facebook">
-<test id="s1-t1" name="Scenario: Login using valid credentials">
+<test id="s1-t1" name="Scenario: Save cookies from valid credentials">
 <kw type="setup" name="Begin web test" library="common">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -9,16 +9,16 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20180912 18:16:32.428" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" endtime="20180912 18:16:34.958" starttime="20180912 18:16:32.428"></status>
+<msg timestamp="20180913 01:05:01.534" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20180913 01:05:03.764" starttime="20180913 01:05:01.533"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:34.959" starttime="20180912 18:16:32.427"></status>
+<status status="PASS" endtime="20180913 01:05:03.764" starttime="20180913 01:05:01.533"></status>
 </kw>
-<kw name="user login using valid credentials" library="facebookApp">
+<kw name="save cookies into file" library="facebookApp">
 <arguments>
 <arg>${USER_VALID}</arg>
 </arguments>
-<kw name="When user submits credentials from" library="facebookApp">
+<kw name="user submits credentials from" library="facebookApp">
 <doc>Submitting dictionary of username and password</doc>
 <arguments>
 <arg>${credential}</arg>
@@ -32,10 +32,10 @@
 <arguments>
 <arg>${BASE_URL}${url}</arg>
 </arguments>
-<msg timestamp="20180912 18:16:34.964" level="INFO">Opening url 'https://facebook.com'</msg>
-<status status="PASS" endtime="20180912 18:16:41.654" starttime="20180912 18:16:34.963"></status>
+<msg timestamp="20180913 01:05:03.767" level="INFO">Opening url 'https://facebook.com'</msg>
+<status status="PASS" endtime="20180913 01:05:07.451" starttime="20180913 01:05:03.767"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:41.654" starttime="20180912 18:16:34.962"></status>
+<status status="PASS" endtime="20180913 01:05:07.451" starttime="20180913 01:05:03.766"></status>
 </kw>
 <kw name="Submit credentials" library="login">
 <arguments>
@@ -52,10 +52,10 @@
 <arg>${USERNAME_LOC}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20180912 18:16:41.657" level="INFO">Typing text 'gagakhendry@gmail.com' into text field 'id=email'.</msg>
-<status status="PASS" endtime="20180912 18:16:41.936" starttime="20180912 18:16:41.656"></status>
+<msg timestamp="20180913 01:05:07.455" level="INFO">Typing text 'gagakhendry@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" endtime="20180913 01:05:07.768" starttime="20180913 01:05:07.454"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:41.936" starttime="20180912 18:16:41.655"></status>
+<status status="PASS" endtime="20180913 01:05:07.768" starttime="20180913 01:05:07.453"></status>
 </kw>
 <kw name="Fill password" library="login">
 <arguments>
@@ -67,10 +67,10 @@
 <arg>${PASSWORD_LOC}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20180912 18:16:41.937" level="INFO">Typing text 'oranggagah' into text field 'id=pass'.</msg>
-<status status="PASS" endtime="20180912 18:16:42.081" starttime="20180912 18:16:41.937"></status>
+<msg timestamp="20180913 01:05:07.769" level="INFO">Typing text 'oranggagah' into text field 'id=pass'.</msg>
+<status status="PASS" endtime="20180913 01:05:07.924" starttime="20180913 01:05:07.769"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:42.081" starttime="20180912 18:16:41.936"></status>
+<status status="PASS" endtime="20180913 01:05:07.924" starttime="20180913 01:05:07.768"></status>
 </kw>
 <kw name="Click submit" library="login">
 <kw name="Mouse Over" library="SeleniumLibrary">
@@ -78,113 +78,293 @@
 <arguments>
 <arg>${SUBMIT_BUTTON_LOC}</arg>
 </arguments>
-<msg timestamp="20180912 18:16:42.082" level="INFO">Simulating Mouse Over on element 'id=u_0_2'.</msg>
-<status status="PASS" endtime="20180912 18:16:42.130" starttime="20180912 18:16:42.081"></status>
+<msg timestamp="20180913 01:05:07.926" level="INFO">Simulating Mouse Over on element 'id=u_0_2'.</msg>
+<status status="PASS" endtime="20180913 01:05:07.977" starttime="20180913 01:05:07.925"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${SUBMIT_BUTTON_LOC}</arg>
 </arguments>
-<msg timestamp="20180912 18:16:42.131" level="INFO">Clicking element 'id=u_0_2'.</msg>
-<status status="PASS" endtime="20180912 18:16:48.681" starttime="20180912 18:16:42.131"></status>
+<msg timestamp="20180913 01:05:07.978" level="INFO">Clicking element 'id=u_0_2'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.654" starttime="20180913 01:05:07.977"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:48.681" starttime="20180912 18:16:42.081"></status>
+<status status="PASS" endtime="20180913 01:05:13.654" starttime="20180913 01:05:07.925"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:48.681" starttime="20180912 18:16:41.655"></status>
+<status status="PASS" endtime="20180913 01:05:13.655" starttime="20180913 01:05:07.452"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:48.681" starttime="20180912 18:16:34.961"></status>
+<status status="PASS" endtime="20180913 01:05:13.655" starttime="20180913 01:05:03.766"></status>
 </kw>
-<kw name="And user selects logout button on &quot;Landing&quot; page" library="facebookApp">
-<kw name="Click modal page" library="landing">
-<doc>Click black modal window which hidden logout button</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Saving cookies" library="login">
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
 <arguments>
-<arg>${MODAL_LOC}</arg>
+<arg>presence</arg>
 </arguments>
-<msg timestamp="20180912 18:16:48.683" level="INFO">Clicking element 'xpath=//div[@class='_3ixn']'.</msg>
-<status status="PASS" endtime="20180912 18:16:49.540" starttime="20180912 18:16:48.683"></status>
+<assign>
+<var>${presence_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.738" level="INFO">${presence_cookie} = name=presence
+value=EDvF3EtimeF1536775512EuserFA21047218465A2EstateFDutF1536775512710CEchFDp_5f1047218465F0CC
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=False
+expiry=None</msg>
+<status status="PASS" endtime="20180913 01:05:13.738" starttime="20180913 01:05:13.656"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:49.540" starttime="20180912 18:16:48.682"></status>
-</kw>
-<kw name="Hover to user menu" library="landing">
-<kw name="Mouse Over" library="SeleniumLibrary">
-<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
 <arguments>
-<arg>${USER_MENU_LOC}</arg>
+<arg>pl</arg>
 </arguments>
-<msg timestamp="20180912 18:16:49.541" level="INFO">Simulating Mouse Over on element 'xpath=//div[@class='_cy6 _2s24'][2]//div[@class='_4kny'][2]'.</msg>
-<status status="PASS" endtime="20180912 18:16:49.713" starttime="20180912 18:16:49.541"></status>
+<assign>
+<var>${pl_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.768" level="INFO">${pl_cookie} = name=pl
+value=n
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=True
+expiry=2018-12-12 01:05:08.784449</msg>
+<status status="PASS" endtime="20180913 01:05:13.768" starttime="20180913 01:05:13.739"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
 <arguments>
-<arg>${USER_MENU_LOC}</arg>
+<arg>fr</arg>
 </arguments>
-<msg timestamp="20180912 18:16:49.714" level="INFO">Clicking element 'xpath=//div[@class='_cy6 _2s24'][2]//div[@class='_4kny'][2]'.</msg>
-<status status="PASS" endtime="20180912 18:16:49.942" starttime="20180912 18:16:49.714"></status>
+<assign>
+<var>${fr_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.781" level="INFO">${fr_cookie} = name=fr
+value=1T2X2ZGGXhp21TpJ0.AWVs0dNLNcNpNHdX02gcFAAgrFc.BbmVVQ.bW.AAA.0.0.BbmVVU.AWXAsjKP
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=True
+expiry=2018-12-12 01:05:08.784400</msg>
+<status status="PASS" endtime="20180913 01:05:13.781" starttime="20180913 01:05:13.768"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:49.942" starttime="20180912 18:16:49.540"></status>
-</kw>
-<kw name="Click logout button" library="landing">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` appears on current page.</doc>
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
 <arguments>
-<arg>${LOGOUT_BUTTON_LOC}</arg>
+<arg>xs</arg>
 </arguments>
-<status status="PASS" endtime="20180912 18:16:50.244" starttime="20180912 18:16:49.943"></status>
+<assign>
+<var>${xs_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.792" level="INFO">${xs_cookie} = name=xs
+value=50%3ANOTqf60iDaXk7w%3A2%3A1536775508%3A7283%3A10940
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=True
+expiry=2018-12-12 01:05:08.784348</msg>
+<status status="PASS" endtime="20180913 01:05:13.792" starttime="20180913 01:05:13.782"></status>
 </kw>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
 <arguments>
-<arg>${LOGOUT_BUTTON_LOC}</arg>
+<arg>datr</arg>
 </arguments>
-<msg timestamp="20180912 18:16:50.245" level="INFO">Simulating Mouse Over on element 'xpath=//div[@class='uiScrollableAreaContent']//li[8]/a'.</msg>
-<status status="PASS" endtime="20180912 18:16:50.313" starttime="20180912 18:16:50.244"></status>
+<assign>
+<var>${datr_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.909" level="INFO">${datr_cookie} = name=datr
+value=UFWZW0i8UYAmEfib2swVqofB
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=True
+expiry=2020-09-12 01:05:06.270324</msg>
+<status status="PASS" endtime="20180913 01:05:13.909" starttime="20180913 01:05:13.793"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
 <arguments>
-<arg>${LOGOUT_BUTTON_LOC}</arg>
+<arg>c_user</arg>
 </arguments>
-<msg timestamp="20180912 18:16:50.314" level="INFO">Clicking element 'xpath=//div[@class='uiScrollableAreaContent']//li[8]/a'.</msg>
-<status status="PASS" endtime="20180912 18:16:52.559" starttime="20180912 18:16:50.313"></status>
+<assign>
+<var>${c_user_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.954" level="INFO">${c_user_cookie} = name=c_user
+value=1047218465
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=False
+expiry=2018-12-12 01:05:08.784216</msg>
+<status status="PASS" endtime="20180913 01:05:13.954" starttime="20180913 01:05:13.909"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:52.559" starttime="20180912 18:16:49.942"></status>
-</kw>
-<status status="PASS" endtime="20180912 18:16:52.559" starttime="20180912 18:16:48.682"></status>
-</kw>
-<kw name="Then &quot;Login&quot; page is displayed" library="facebookApp">
-<kw name="Verify &quot;Login&quot; page loaded" library="login">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` appears on current page.</doc>
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
 <arguments>
-<arg>${LOGIN_TITLE_LOC}</arg>
+<arg>spin</arg>
 </arguments>
-<status status="PASS" endtime="20180912 18:16:52.581" starttime="20180912 18:16:52.560"></status>
+<assign>
+<var>${spin_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.960" level="INFO">${spin_cookie} = name=spin
+value=r.4303580_b.trunk_t.1536775508_s.1_v.2_
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=True
+expiry=2018-09-14 02:05:09.118959</msg>
+<status status="PASS" endtime="20180913 01:05:13.960" starttime="20180913 01:05:13.954"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:52.581" starttime="20180912 18:16:52.560"></status>
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
+<arguments>
+<arg>wd</arg>
+</arguments>
+<assign>
+<var>${wd_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.967" level="INFO">${wd_cookie} = name=wd
+value=1200x654
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=False
+expiry=2018-09-20 01:05:11</msg>
+<status status="PASS" endtime="20180913 01:05:13.968" starttime="20180913 01:05:13.961"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:52.581" starttime="20180912 18:16:52.559"></status>
+<kw name="Get Cookie" library="SeleniumLibrary">
+<doc>Returns information of cookie with ``name`` as an object.</doc>
+<arguments>
+<arg>sb</arg>
+</arguments>
+<assign>
+<var>${sb_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:13.974" level="INFO">${sb_cookie} = name=sb
+value=UFWZWxlnPvum3gqjI9k-fIC_
+path=/
+domain=.facebook.com
+secure=True
+httpOnly=True
+expiry=2020-09-12 01:05:08.784119</msg>
+<status status="PASS" endtime="20180913 01:05:13.974" starttime="20180913 01:05:13.968"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:52.581" starttime="20180912 18:16:34.960"></status>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/*.txt</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.981" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/c_user_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/c_user_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:13.981" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/datr_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/datr_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:13.982" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/fr_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/fr_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:13.982" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/pl_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/pl_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:13.982" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/presence_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/presence_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:13.982" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/sb_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/sb_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:13.982" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/spin_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/spin_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:13.983" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/wd_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/wd_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:13.983" html="yes" level="INFO">Removed file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/xs_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/xs_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.983" starttime="20180913 01:05:13.974"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/presence_cookie.txt</arg>
+<arg>${presence_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.984" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/presence_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/presence_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.984" starttime="20180913 01:05:13.983"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/pl_cookie.txt</arg>
+<arg>${pl_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.985" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/pl_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/pl_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.985" starttime="20180913 01:05:13.985"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/fr_cookie.txt</arg>
+<arg>${fr_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.986" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/fr_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/fr_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.987" starttime="20180913 01:05:13.986"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/xs_cookie.txt</arg>
+<arg>${xs_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.988" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/xs_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/xs_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.988" starttime="20180913 01:05:13.987"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/datr_cookie.txt</arg>
+<arg>${datr_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.990" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/datr_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/datr_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.990" starttime="20180913 01:05:13.988"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/c_user_cookie.txt</arg>
+<arg>${c_user_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.993" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/c_user_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/c_user_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.993" starttime="20180913 01:05:13.990"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/spin_cookie.txt</arg>
+<arg>${spin_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.994" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/spin_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/spin_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.995" starttime="20180913 01:05:13.993"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/wd_cookie.txt</arg>
+<arg>${wd_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.997" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/wd_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/wd_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.997" starttime="20180913 01:05:13.995"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/sb_cookie.txt</arg>
+<arg>${sb_cookie.value}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:13.998" html="yes" level="INFO">Created file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/sb_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/sb_cookie.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180913 01:05:13.999" starttime="20180913 01:05:13.997"></status>
+</kw>
+<status status="PASS" endtime="20180913 01:05:13.999" starttime="20180913 01:05:13.655"></status>
+</kw>
+<status status="PASS" endtime="20180913 01:05:13.999" starttime="20180913 01:05:03.765"></status>
 </kw>
 <kw type="teardown" name="End web test" library="common">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20180912 18:16:52.704" starttime="20180912 18:16:52.582"></status>
+<status status="PASS" endtime="20180913 01:05:14.092" starttime="20180913 01:05:14.001"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:52.705" starttime="20180912 18:16:52.582"></status>
+<status status="PASS" endtime="20180913 01:05:14.092" starttime="20180913 01:05:14.000"></status>
 </kw>
+<doc>This scenario is for saving cookies for reloading App without inputting credential</doc>
 <tags>
-<tag>login</tag>
-<tag>smoke</tag>
-<tag>valid</tag>
+<tag>cookies</tag>
+<tag>save</tag>
 </tags>
-<status status="PASS" endtime="20180912 18:16:52.705" critical="yes" starttime="20180912 18:16:32.426"></status>
+<status status="PASS" endtime="20180913 01:05:14.092" critical="yes" starttime="20180913 01:05:01.532"></status>
 </test>
-<test id="s1-t2" name="Scenario: Login using invalid credentials">
+<test id="s1-t2" name="Scenario: Load cookies to browser">
 <kw type="setup" name="Begin web test" library="common">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -192,20 +372,12 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20180912 18:16:52.714" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" endtime="20180912 18:16:54.791" starttime="20180912 18:16:52.713"></status>
+<msg timestamp="20180913 01:05:14.098" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20180913 01:05:16.195" starttime="20180913 01:05:14.097"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:54.792" starttime="20180912 18:16:52.712"></status>
+<status status="PASS" endtime="20180913 01:05:16.195" starttime="20180913 01:05:14.096"></status>
 </kw>
-<kw name="user login using invalid credentials" library="facebookApp">
-<arguments>
-<arg>${USER_INVALID}</arg>
-</arguments>
-<kw name="When user submits credentials from" library="facebookApp">
-<doc>Submitting dictionary of username and password</doc>
-<arguments>
-<arg>${credential}</arg>
-</arguments>
+<kw name="load cookies from file" library="facebookApp">
 <kw name="Navigate to" library="landing">
 <arguments>
 <arg>facebook.com</arg>
@@ -215,100 +387,246 @@
 <arguments>
 <arg>${BASE_URL}${url}</arg>
 </arguments>
-<msg timestamp="20180912 18:16:54.799" level="INFO">Opening url 'https://facebook.com'</msg>
-<status status="PASS" endtime="20180912 18:16:58.106" starttime="20180912 18:16:54.798"></status>
+<msg timestamp="20180913 01:05:16.198" level="INFO">Opening url 'https://facebook.com'</msg>
+<status status="PASS" endtime="20180913 01:05:19.926" starttime="20180913 01:05:16.198"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:58.106" starttime="20180912 18:16:54.797"></status>
+<status status="PASS" endtime="20180913 01:05:19.926" starttime="20180913 01:05:16.197"></status>
 </kw>
-<kw name="Submit credentials" library="login">
+<kw name="Loading cookies" library="login">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>${credential.email}</arg>
-<arg>${credential.password}</arg>
+<arg>${COOKIES_DIR}/presence_cookie.txt</arg>
 </arguments>
-<kw name="Fill username" library="login">
+<assign>
+<var>${presence_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.928" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/presence_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/presence_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.929" level="INFO">${presence_cookie} = EDvF3EtimeF1536775512EuserFA21047218465A2EstateFDutF1536775512710CEchFDp_5f1047218465F0CC</msg>
+<status status="PASS" endtime="20180913 01:05:19.929" starttime="20180913 01:05:19.927"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>${username}</arg>
+<arg>${COOKIES_DIR}/pl_cookie.txt</arg>
 </arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<assign>
+<var>${pl_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.930" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/pl_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/pl_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.931" level="INFO">${pl_cookie} = n</msg>
+<status status="PASS" endtime="20180913 01:05:19.931" starttime="20180913 01:05:19.929"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>${USERNAME_LOC}</arg>
-<arg>${username}</arg>
+<arg>${COOKIES_DIR}/fr_cookie.txt</arg>
 </arguments>
-<msg timestamp="20180912 18:16:58.108" level="INFO">Typing text 'invalid@email.com' into text field 'id=email'.</msg>
-<status status="PASS" endtime="20180912 18:16:58.345" starttime="20180912 18:16:58.108"></status>
+<assign>
+<var>${fr_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.932" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/fr_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/fr_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.932" level="INFO">${fr_cookie} = 1T2X2ZGGXhp21TpJ0.AWVs0dNLNcNpNHdX02gcFAAgrFc.BbmVVQ.bW.AAA.0.0.BbmVVU.AWXAsjKP</msg>
+<status status="PASS" endtime="20180913 01:05:19.932" starttime="20180913 01:05:19.931"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:58.345" starttime="20180912 18:16:58.107"></status>
-</kw>
-<kw name="Fill password" library="login">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>${password}</arg>
+<arg>${COOKIES_DIR}/xs_cookie.txt</arg>
 </arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<assign>
+<var>${xs_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.933" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/xs_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/xs_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.934" level="INFO">${xs_cookie} = 50%3ANOTqf60iDaXk7w%3A2%3A1536775508%3A7283%3A10940</msg>
+<status status="PASS" endtime="20180913 01:05:19.934" starttime="20180913 01:05:19.933"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>${PASSWORD_LOC}</arg>
-<arg>${password}</arg>
+<arg>${COOKIES_DIR}/datr_cookie.txt</arg>
 </arguments>
-<msg timestamp="20180912 18:16:58.347" level="INFO">Typing text 'invalid' into text field 'id=pass'.</msg>
-<status status="PASS" endtime="20180912 18:16:58.467" starttime="20180912 18:16:58.346"></status>
+<assign>
+<var>${datr_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.935" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/datr_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/datr_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.935" level="INFO">${datr_cookie} = UFWZW0i8UYAmEfib2swVqofB</msg>
+<status status="PASS" endtime="20180913 01:05:19.935" starttime="20180913 01:05:19.934"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:16:58.467" starttime="20180912 18:16:58.345"></status>
-</kw>
-<kw name="Click submit" library="login">
-<kw name="Mouse Over" library="SeleniumLibrary">
-<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>${SUBMIT_BUTTON_LOC}</arg>
+<arg>${COOKIES_DIR}/c_user_cookie.txt</arg>
 </arguments>
-<msg timestamp="20180912 18:16:58.468" level="INFO">Simulating Mouse Over on element 'id=u_0_2'.</msg>
-<status status="PASS" endtime="20180912 18:16:58.526" starttime="20180912 18:16:58.468"></status>
+<assign>
+<var>${c_user_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.936" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/c_user_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/c_user_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.936" level="INFO">${c_user_cookie} = 1047218465</msg>
+<status status="PASS" endtime="20180913 01:05:19.936" starttime="20180913 01:05:19.935"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>${SUBMIT_BUTTON_LOC}</arg>
+<arg>${COOKIES_DIR}/spin_cookie.txt</arg>
 </arguments>
-<msg timestamp="20180912 18:16:58.527" level="INFO">Clicking element 'id=u_0_2'.</msg>
-<status status="PASS" endtime="20180912 18:17:04.733" starttime="20180912 18:16:58.526"></status>
+<assign>
+<var>${spin_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.937" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/spin_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/spin_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.937" level="INFO">${spin_cookie} = r.4303580_b.trunk_t.1536775508_s.1_v.2_</msg>
+<status status="PASS" endtime="20180913 01:05:19.937" starttime="20180913 01:05:19.936"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:17:04.733" starttime="20180912 18:16:58.468"></status>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/wd_cookie.txt</arg>
+</arguments>
+<assign>
+<var>${wd_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.938" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/wd_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/wd_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.939" level="INFO">${wd_cookie} = 1200x654</msg>
+<status status="PASS" endtime="20180913 01:05:19.939" starttime="20180913 01:05:19.938"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:17:04.733" starttime="20180912 18:16:58.107"></status>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${COOKIES_DIR}/sb_cookie.txt</arg>
+</arguments>
+<assign>
+<var>${sb_cookie}</var>
+</assign>
+<msg timestamp="20180913 01:05:19.939" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/sb_cookie.txt"&gt;/Users/rajadavid/PycharmProjects/facebook-ui-test/Data/cookies/sb_cookie.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20180913 01:05:19.940" level="INFO">${sb_cookie} = UFWZWxlnPvum3gqjI9k-fIC_</msg>
+<status status="PASS" endtime="20180913 01:05:19.940" starttime="20180913 01:05:19.939"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:17:04.734" starttime="20180912 18:16:54.795"></status>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>presence</arg>
+<arg>${presence_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:19.947" starttime="20180913 01:05:19.940"></status>
 </kw>
-<kw name="Then &quot;Login&quot; page is displayed with error message" library="facebookApp">
-<kw name="Verify login error message" library="login">
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>pl</arg>
+<arg>${pl_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:19.953" starttime="20180913 01:05:19.947"></status>
+</kw>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>fr</arg>
+<arg>${fr_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:19.960" starttime="20180913 01:05:19.953"></status>
+</kw>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>xs</arg>
+<arg>${xs_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:19.967" starttime="20180913 01:05:19.960"></status>
+</kw>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>datr</arg>
+<arg>${datr_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:19.976" starttime="20180913 01:05:19.967"></status>
+</kw>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>c_user</arg>
+<arg>${c_user_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:19.984" starttime="20180913 01:05:19.976"></status>
+</kw>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>spin</arg>
+<arg>${spin_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:19.991" starttime="20180913 01:05:19.985"></status>
+</kw>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>wd</arg>
+<arg>${wd_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:19.997" starttime="20180913 01:05:19.991"></status>
+</kw>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>sb</arg>
+<arg>${sb_cookie}</arg>
+</arguments>
+<status status="PASS" endtime="20180913 01:05:20.003" starttime="20180913 01:05:19.997"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180913 01:05:22.005" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180913 01:05:22.005" starttime="20180913 01:05:20.004"></status>
+</kw>
+<status status="PASS" endtime="20180913 01:05:22.006" starttime="20180913 01:05:19.927"></status>
+</kw>
+<kw name="Navigate to" library="landing">
+<arguments>
+<arg>facebook.com</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}${url}</arg>
+</arguments>
+<msg timestamp="20180913 01:05:22.007" level="INFO">Opening url 'https://facebook.com'</msg>
+<status status="PASS" endtime="20180913 01:05:23.579" starttime="20180913 01:05:22.007"></status>
+</kw>
+<status status="PASS" endtime="20180913 01:05:23.580" starttime="20180913 01:05:22.006"></status>
+</kw>
+<kw name="Verify &quot;Landing&quot; page loaded" library="landing">
+<doc>Ensure the page title is loaded before verifying</doc>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>${ERROR_POPUP}</arg>
+<arg>${LANDING_TITLE_LOC}</arg>
+<arg>timeout=30.0</arg>
 </arguments>
-<status status="PASS" endtime="20180912 18:17:04.752" starttime="20180912 18:17:04.735"></status>
+<status status="PASS" endtime="20180913 01:05:24.497" starttime="20180913 01:05:23.581"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:17:04.753" starttime="20180912 18:17:04.734"></status>
+<status status="PASS" endtime="20180913 01:05:24.498" starttime="20180913 01:05:23.580"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:17:04.753" starttime="20180912 18:17:04.734"></status>
-</kw>
-<status status="PASS" endtime="20180912 18:17:04.753" starttime="20180912 18:16:54.793"></status>
+<status status="PASS" endtime="20180913 01:05:24.498" starttime="20180913 01:05:16.196"></status>
 </kw>
 <kw type="teardown" name="End web test" library="common">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20180912 18:17:04.860" starttime="20180912 18:17:04.754"></status>
+<status status="PASS" endtime="20180913 01:05:24.589" starttime="20180913 01:05:24.499"></status>
 </kw>
-<status status="PASS" endtime="20180912 18:17:04.861" starttime="20180912 18:17:04.754"></status>
+<status status="PASS" endtime="20180913 01:05:24.589" starttime="20180913 01:05:24.499"></status>
 </kw>
+<doc>This scenario is to test loading saved cookies into browser</doc>
 <tags>
-<tag>invalid</tag>
-<tag>login</tag>
-<tag>smoke</tag>
+<tag>cookies</tag>
+<tag>load</tag>
 </tags>
-<status status="PASS" endtime="20180912 18:17:04.861" critical="yes" starttime="20180912 18:16:52.711"></status>
+<status status="PASS" endtime="20180913 01:05:24.590" critical="yes" starttime="20180913 01:05:14.094"></status>
 </test>
 <doc>Test Facebook web app using Cucumber syntax and Robot Framework</doc>
-<status status="PASS" endtime="20180912 18:17:04.865" starttime="20180912 18:16:31.589"></status>
+<status status="PASS" endtime="20180913 01:05:24.594" starttime="20180913 01:05:00.688"></status>
 </suite>
 <statistics>
 <total>
@@ -316,10 +634,9 @@
 <stat fail="0" pass="2">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="1">invalid</stat>
-<stat fail="0" pass="2">login</stat>
-<stat fail="0" pass="2">smoke</stat>
-<stat fail="0" pass="1">valid</stat>
+<stat fail="0" pass="2">cookies</stat>
+<stat fail="0" pass="1">load</stat>
+<stat fail="0" pass="1">save</stat>
 </tag>
 <suite>
 <stat fail="0" id="s1" name="Facebook" pass="2">Facebook</stat>

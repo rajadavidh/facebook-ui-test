@@ -13,6 +13,10 @@ ${BROWSER}
 Begin web test
     open browser  about:blank  ${BROWSER}
 #    maximize browser window
+
+Begin Web Test with logged in account
+    open browser  about:blank  ${BROWSER}
+#    maximize browser window
     # TODO Setup login step as starting point
     # Source: https://stackoverflow.com/questions/50101468/robot-framework-and-dry-function-steps-repeat-testcase-steps
 
