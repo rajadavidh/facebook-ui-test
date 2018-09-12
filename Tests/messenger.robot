@@ -15,7 +15,4 @@ Test Teardown  End Web Test
 *** Test Cases ***
 Scenario: Send messages on messenger
     [Tags]  smoke
-    [Template]  user send messages
-
-    # credentials       # message_content
-    ${USER_VALID}       test sending message
+    user send messages  test sending message

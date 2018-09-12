@@ -15,7 +15,4 @@ Test Teardown  End Web Test
 *** Test Cases ***
 Scenario: Open and post info on group
     [Tags]  smoke
-    [Template]  user post content on group
-
-    # credentials       # post_content
-    ${USER_VALID}       test posting content: http://rajadavidhasugian.wordpress.com
+    user post content on group  test posting content: http://rajadavidhasugian.wordpress.com
