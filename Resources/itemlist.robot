@@ -1,3 +1,5 @@
+# Author: Raja David Hasugian
+
 *** Settings ***
 Library  SeleniumLibrary
 
