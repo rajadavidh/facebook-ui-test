@@ -45,3 +45,16 @@ user selects logout button on "Landing" page
 
 "Login" page is displayed with error message
     login.Verify login error message
+
+
+# Procedural Keywords
+save cookies into file
+    [Arguments]  ${credential}
+    user submits credentials from  ${credential}
+    login.Saving cookies
+
+load cookies from file
+    landing.Navigate to  facebook.com
+    login.Loading cookies
+    landing.Navigate to  facebook.com
+    landing.Verify "Landing" page loaded

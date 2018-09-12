@@ -5,8 +5,6 @@ Documentation  Test Facebook web app using Cucumber syntax and Robot Framework
 Resource  ../Data/input_data.robot
 Resource  ../Resources/common.robot
 Resource  ../Resources/facebookApp/facebookApp.robot
-Resource  ../Resources/groupApp/groupApp.robot
-Resource  ../Resources/messengerApp/messengerApp.robot
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
@@ -28,16 +26,12 @@ Scenario: Login using invalid credentials
     # credentials
     ${USER_INVALID}
 
-Scenario: Send message on messenger
-    [Tags]  smoke
-    [Template]  user send messages
+Scenario: Save cookies from valid credentials
+    [Documentation]  This scenario is for saving cookies for reloading App without inputting credential
+    [Tags]  cookies  save
+    save cookies into file  ${USER_VALID}
 
-    # credentials       # message
-    ${USER_VALID}       test message
-
-Scenario: Open and post info on group
-    [Tags]  smoke
-    [Template]  user post content on group
-
-    # credentials       # post_content
-    ${USER_VALID}       test content: http://rajadavidhasugian.wordpress.com
+Scenario: Load cookies to browser
+    [Documentation]  This scenario is to test loading saved cookies into browser
+    [Tags]  cookies  load
+    load cookies from file
