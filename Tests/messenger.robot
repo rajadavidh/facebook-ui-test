@@ -1,4 +1,5 @@
 # Author: Raja David Hasugian
+# robot -d results tests/messenger.robot
 
 *** Settings ***
 Documentation  Test Facebook web app using Cucumber syntax and Robot Framework

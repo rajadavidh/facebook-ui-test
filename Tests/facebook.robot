@@ -1,4 +1,6 @@
 # Author: Raja David Hasugian
+# robot -d results tests/facebook.robot
+# robot -i save -d results tests/facebook.robot
 
 *** Settings ***
 Documentation  Test Facebook web app using Cucumber syntax and Robot Framework
@@ -7,6 +9,7 @@ Resource  ../Resources/common.robot
 Resource  ../Resources/facebookApp/facebookApp.robot
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
+
 
 *** Variables ***
 
