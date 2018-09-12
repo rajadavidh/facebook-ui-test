@@ -6,7 +6,7 @@ Resource  ../Data/input_data.robot
 Resource  ../Resources/common.robot
 Resource  ../Resources/facebookApp/facebookApp.robot
 Resource  ../Resources/groupApp/groupApp.robot
-Test Setup  Begin Web Test
+Test Setup  Begin Web Test with logged in account
 Test Teardown  End Web Test
 
 *** Variables ***
