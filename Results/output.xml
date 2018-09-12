@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180912 18:16:31.581" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/rajadavid/PycharmProjects/facebook-ui-test/tests/facebook.robot" id="s1" name="Facebook">
+<test id="s1-t1" name="Scenario: Login using valid credentials">
+<kw type="setup" name="Begin web test" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:32.428" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20180912 18:16:34.958" starttime="20180912 18:16:32.428"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:34.959" starttime="20180912 18:16:32.427"></status>
+</kw>
+<kw name="user login using valid credentials" library="facebookApp">
+<arguments>
+<arg>${USER_VALID}</arg>
+</arguments>
+<kw name="When user submits credentials from" library="facebookApp">
+<doc>Submitting dictionary of username and password</doc>
+<arguments>
+<arg>${credential}</arg>
+</arguments>
+<kw name="Navigate to" library="landing">
+<arguments>
+<arg>facebook.com</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}${url}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:34.964" level="INFO">Opening url 'https://facebook.com'</msg>
+<status status="PASS" endtime="20180912 18:16:41.654" starttime="20180912 18:16:34.963"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:41.654" starttime="20180912 18:16:34.962"></status>
+</kw>
+<kw name="Submit credentials" library="login">
+<arguments>
+<arg>${credential.email}</arg>
+<arg>${credential.password}</arg>
+</arguments>
+<kw name="Fill username" library="login">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOC}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:41.657" level="INFO">Typing text 'gagakhendry@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" endtime="20180912 18:16:41.936" starttime="20180912 18:16:41.656"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:41.936" starttime="20180912 18:16:41.655"></status>
+</kw>
+<kw name="Fill password" library="login">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_LOC}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:41.937" level="INFO">Typing text 'oranggagah' into text field 'id=pass'.</msg>
+<status status="PASS" endtime="20180912 18:16:42.081" starttime="20180912 18:16:41.937"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:42.081" starttime="20180912 18:16:41.936"></status>
+</kw>
+<kw name="Click submit" library="login">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT_BUTTON_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:42.082" level="INFO">Simulating Mouse Over on element 'id=u_0_2'.</msg>
+<status status="PASS" endtime="20180912 18:16:42.130" starttime="20180912 18:16:42.081"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT_BUTTON_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:42.131" level="INFO">Clicking element 'id=u_0_2'.</msg>
+<status status="PASS" endtime="20180912 18:16:48.681" starttime="20180912 18:16:42.131"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:48.681" starttime="20180912 18:16:42.081"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:48.681" starttime="20180912 18:16:41.655"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:48.681" starttime="20180912 18:16:34.961"></status>
+</kw>
+<kw name="And user selects logout button on &quot;Landing&quot; page" library="facebookApp">
+<kw name="Click modal page" library="landing">
+<doc>Click black modal window which hidden logout button</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${MODAL_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:48.683" level="INFO">Clicking element 'xpath=//div[@class='_3ixn']'.</msg>
+<status status="PASS" endtime="20180912 18:16:49.540" starttime="20180912 18:16:48.683"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:49.540" starttime="20180912 18:16:48.682"></status>
+</kw>
+<kw name="Hover to user menu" library="landing">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${USER_MENU_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:49.541" level="INFO">Simulating Mouse Over on element 'xpath=//div[@class='_cy6 _2s24'][2]//div[@class='_4kny'][2]'.</msg>
+<status status="PASS" endtime="20180912 18:16:49.713" starttime="20180912 18:16:49.541"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${USER_MENU_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:49.714" level="INFO">Clicking element 'xpath=//div[@class='_cy6 _2s24'][2]//div[@class='_4kny'][2]'.</msg>
+<status status="PASS" endtime="20180912 18:16:49.942" starttime="20180912 18:16:49.714"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:49.942" starttime="20180912 18:16:49.540"></status>
+</kw>
+<kw name="Click logout button" library="landing">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${LOGOUT_BUTTON_LOC}</arg>
+</arguments>
+<status status="PASS" endtime="20180912 18:16:50.244" starttime="20180912 18:16:49.943"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${LOGOUT_BUTTON_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:50.245" level="INFO">Simulating Mouse Over on element 'xpath=//div[@class='uiScrollableAreaContent']//li[8]/a'.</msg>
+<status status="PASS" endtime="20180912 18:16:50.313" starttime="20180912 18:16:50.244"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGOUT_BUTTON_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:50.314" level="INFO">Clicking element 'xpath=//div[@class='uiScrollableAreaContent']//li[8]/a'.</msg>
+<status status="PASS" endtime="20180912 18:16:52.559" starttime="20180912 18:16:50.313"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:52.559" starttime="20180912 18:16:49.942"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:52.559" starttime="20180912 18:16:48.682"></status>
+</kw>
+<kw name="Then &quot;Login&quot; page is displayed" library="facebookApp">
+<kw name="Verify &quot;Login&quot; page loaded" library="login">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN_TITLE_LOC}</arg>
+</arguments>
+<status status="PASS" endtime="20180912 18:16:52.581" starttime="20180912 18:16:52.560"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:52.581" starttime="20180912 18:16:52.560"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:52.581" starttime="20180912 18:16:52.559"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:52.581" starttime="20180912 18:16:34.960"></status>
+</kw>
+<kw type="teardown" name="End web test" library="common">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180912 18:16:52.704" starttime="20180912 18:16:52.582"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:52.705" starttime="20180912 18:16:52.582"></status>
+</kw>
+<tags>
+<tag>login</tag>
+<tag>smoke</tag>
+<tag>valid</tag>
+</tags>
+<status status="PASS" endtime="20180912 18:16:52.705" critical="yes" starttime="20180912 18:16:32.426"></status>
+</test>
+<test id="s1-t2" name="Scenario: Login using invalid credentials">
+<kw type="setup" name="Begin web test" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:52.714" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20180912 18:16:54.791" starttime="20180912 18:16:52.713"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:54.792" starttime="20180912 18:16:52.712"></status>
+</kw>
+<kw name="user login using invalid credentials" library="facebookApp">
+<arguments>
+<arg>${USER_INVALID}</arg>
+</arguments>
+<kw name="When user submits credentials from" library="facebookApp">
+<doc>Submitting dictionary of username and password</doc>
+<arguments>
+<arg>${credential}</arg>
+</arguments>
+<kw name="Navigate to" library="landing">
+<arguments>
+<arg>facebook.com</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}${url}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:54.799" level="INFO">Opening url 'https://facebook.com'</msg>
+<status status="PASS" endtime="20180912 18:16:58.106" starttime="20180912 18:16:54.798"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:58.106" starttime="20180912 18:16:54.797"></status>
+</kw>
+<kw name="Submit credentials" library="login">
+<arguments>
+<arg>${credential.email}</arg>
+<arg>${credential.password}</arg>
+</arguments>
+<kw name="Fill username" library="login">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOC}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:58.108" level="INFO">Typing text 'invalid@email.com' into text field 'id=email'.</msg>
+<status status="PASS" endtime="20180912 18:16:58.345" starttime="20180912 18:16:58.108"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:58.345" starttime="20180912 18:16:58.107"></status>
+</kw>
+<kw name="Fill password" library="login">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_LOC}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:58.347" level="INFO">Typing text 'invalid' into text field 'id=pass'.</msg>
+<status status="PASS" endtime="20180912 18:16:58.467" starttime="20180912 18:16:58.346"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:16:58.467" starttime="20180912 18:16:58.345"></status>
+</kw>
+<kw name="Click submit" library="login">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT_BUTTON_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:58.468" level="INFO">Simulating Mouse Over on element 'id=u_0_2'.</msg>
+<status status="PASS" endtime="20180912 18:16:58.526" starttime="20180912 18:16:58.468"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT_BUTTON_LOC}</arg>
+</arguments>
+<msg timestamp="20180912 18:16:58.527" level="INFO">Clicking element 'id=u_0_2'.</msg>
+<status status="PASS" endtime="20180912 18:17:04.733" starttime="20180912 18:16:58.526"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:17:04.733" starttime="20180912 18:16:58.468"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:17:04.733" starttime="20180912 18:16:58.107"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:17:04.734" starttime="20180912 18:16:54.795"></status>
+</kw>
+<kw name="Then &quot;Login&quot; page is displayed with error message" library="facebookApp">
+<kw name="Verify login error message" library="login">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_POPUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180912 18:17:04.752" starttime="20180912 18:17:04.735"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:17:04.753" starttime="20180912 18:17:04.734"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:17:04.753" starttime="20180912 18:17:04.734"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:17:04.753" starttime="20180912 18:16:54.793"></status>
+</kw>
+<kw type="teardown" name="End web test" library="common">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180912 18:17:04.860" starttime="20180912 18:17:04.754"></status>
+</kw>
+<status status="PASS" endtime="20180912 18:17:04.861" starttime="20180912 18:17:04.754"></status>
+</kw>
+<tags>
+<tag>invalid</tag>
+<tag>login</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" endtime="20180912 18:17:04.861" critical="yes" starttime="20180912 18:16:52.711"></status>
+</test>
+<doc>Test Facebook web app using Cucumber syntax and Robot Framework</doc>
+<status status="PASS" endtime="20180912 18:17:04.865" starttime="20180912 18:16:31.589"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">invalid</stat>
+<stat fail="0" pass="2">login</stat>
+<stat fail="0" pass="2">smoke</stat>
+<stat fail="0" pass="1">valid</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Facebook" pass="2">Facebook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
