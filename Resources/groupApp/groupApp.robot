@@ -9,6 +9,10 @@ Library  OperatingSystem
 
 
 *** Keywords ***
+# Cucumber Syntax
 user post content on group
-    [Arguments]  ${credential}  ${post_content}
+    [Arguments]  ${post_content}
     # TODO
+    When user selects messenger app from topbar
+    And user send to a group post content:  ${post_content}
+    Then Post content is displayed
