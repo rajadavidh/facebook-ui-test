@@ -1,6 +1,6 @@
 # Author: Raja David Hasugian
-# robot -d results tests/facebook.robot
-# robot -i save -d results tests/facebook.robot
+# robot -d results/facebook tests/facebook.robot
+# robot -i save -d results/facebook tests/facebook.robot
 
 *** Settings ***
 Documentation  Test Facebook web app using Cucumber syntax and Robot Framework
