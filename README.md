@@ -11,7 +11,7 @@
 /Resources 
     /*App
         /pago       --> Contains page objects
-        /*App.robot --> Contains keyword using cucumber syntax
+        *App.robot --> Contains keyword using cucumber syntax
 /Results            --> Contains all test results
 /Test               --> Contains all test cases
 ```
@@ -28,3 +28,5 @@ Run this command on terminal: `pip install -r requirements.txt`
 Download it here: http://chromedriver.chromium.org/downloads
 
 Add it inside the project directory
+
+On MacOSX, add the chromedriver on `/usr/local/bin`
