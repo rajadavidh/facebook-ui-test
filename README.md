@@ -11,7 +11,7 @@
 /Resources 
     /*App
         /pago       --> Contains page objects
-        *App.robot --> Contains keyword using cucumber syntax
+        *App.robot  --> Contains keyword using cucumber syntax
 /Results            --> Contains all test results
 /Test               --> Contains all test cases
 ```
