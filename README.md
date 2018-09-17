@@ -43,6 +43,10 @@ Then post content is displayed
 ```
 Sample Run command: `robot -d results tests/facebook.robot`
 
+##### Notes:
+Input your credentials first inside `Data/input_data.robot` before running above command
+
+
 ### Required libraries:
 * Robot Framework 3.0
 * Chromedriver
