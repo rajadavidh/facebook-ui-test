@@ -1,4 +1,5 @@
-# Test Facebook web app using Cucumber syntax and Robot Framework
+# Test framework for Facebook WebApp
+This test framework using Cucumber syntax and Robot Framework
 
 ### Test cases:
 ##### 1. Login using valid and invalid credentials
