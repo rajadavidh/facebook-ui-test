@@ -4,7 +4,7 @@ This test framework using Cucumber syntax and Robot Framework
 ### Test cases:
 ##### 1. Login using valid and invalid credentials
 ```
-# Cucumber Syntax:
+# Keyword and Cucumber syntax:
 user login using valid credentials
     [Arguments]  ${credential}
     When user submits credentials from  ${credential}
@@ -18,14 +18,14 @@ user login using invalid credentials
 ```
 ##### 2. Send message on messenger
 ```
-# Cucumber Syntax:
+# Cucumber syntax:
 When user selects messenger app from topbar
 And user send to a friend message content  ${message_content}
 Then message content is displayed
 ```
 ##### 3. Open and post info on group
 ```
-# Cucumber Syntax:
+# Cucumber syntax:
 When user selects group app from sidebar
 And user send to a group post content  ${post_content}
 Then post content is displayed
@@ -41,10 +41,19 @@ Then post content is displayed
 /Results            --> Contains all test results
 /Test               --> Contains all test cases
 ```
-Sample Run command: `robot -d results tests/facebook.robot`
+Sample Run command: 
+```
+# Put all test results in 'Results' directory 
+robot -d results tests/facebook.robot
+
+# Put test results in specific directory
+robot -d results/facebook tests/facebook.robot
+robot -d results/messenger tests/messenger.robot
+robot -d results/group tests/group.robot
+```
 
 ##### Notes:
-Input your credentials first inside `Data/input_data.robot` before running above command
+Add your credentials first inside `Data/input_data.robot` before running above command
 
 
 ### Required libraries:
