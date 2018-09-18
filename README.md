@@ -1,7 +1,7 @@
 # Test framework for Facebook WebApp
 This test framework using Cucumber syntax and Robot Framework
 
-### Test cases:
+### Test cases
 ##### 1. Login using valid and invalid credentials
 ```
 # Keyword and Cucumber syntax:
@@ -44,19 +44,19 @@ Then post content is displayed
 Sample Run command: 
 ```
 # Put all test results in 'Results' directory 
-robot -d results tests/facebook.robot
+robot -d Results Tests/facebook.robot
 
 # Put test results in specific directory
-robot -d results/facebook tests/facebook.robot
-robot -d results/messenger tests/messenger.robot
-robot -d results/group tests/group.robot
+robot -d Results/facebook Tests/facebook.robot
+robot -d Results/messenger Tests/messenger.robot
+robot -d Results/group Tests/group.robot
 ```
 
 ##### Notes:
 Add your credentials first inside `Data/input_data.robot` before running above command
 
 
-### Required libraries:
+### Required libraries
 * Robot Framework 3.0
 * Chromedriver
 
