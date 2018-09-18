@@ -31,6 +31,9 @@ And user send to a group post content  ${post_content}
 Then post content is displayed
 ```
 
+### Test demo
+![Login test with invalid credential](https://github.com/rajadavidh/facebook-ui-test/blob/master/facebook_test_demo_640px.gif)
+
 ### Directory structure
 ```
 /Data               --> Contains user credentials
